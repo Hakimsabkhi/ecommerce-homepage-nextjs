@@ -1,11 +1,9 @@
 // app/layout.tsx
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/authOptions"; 
 import { Poppins } from "next/font/google";
-import "./globals.css"; // Ensure global styles are imported
+import "./globals.css"; 
 import Headertop from "@/components/menu/Headertop";
 import { Metadata } from "next";
-import "react-toastify/dist/ReactToastify.css";
 import HeaderBottom from "@/components/menu/Headerbottom";
 import Header from "@/components/menu/Header";
 import Footer from "@/components/menu/Footer";
@@ -20,7 +18,6 @@ export const metadata: Metadata = {
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   // Fetch the session server-side
-  const session = await getServerSession(authOptions);
 
   return (
   
