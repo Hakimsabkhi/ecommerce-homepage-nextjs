@@ -21,7 +21,7 @@ const Headerbottom: React.FC = () => {
         <div className="flex justify-between w-[90%] max-xl:w-[95%] font-bold items-center text-xl max-2xl:text-sm">
           {categories.map((category: Category) => (
             <Link 
-              href={`/${category.name}`} 
+              href={"#"} 
               key={category.name} 
               className="flex items-center gap-3 duration-300 hover:text-orange-400" 
               aria-label={category.name}
